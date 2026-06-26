@@ -16,33 +16,69 @@ const collections = [
 
 const ShopByCollection = () => {
   return (
-    <section className="py-10 bg-white">
-      {/* Title */}
-      <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">
-        🌿 Shop By Collection 🌿
-      </h2>
+    <section className="py-5 bg-white">
+  <div className="container">
 
-      {/* Collection Grid */}
-      <div className="flex justify-center gap-6 flex-wrap lg:flex-nowrap">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 place-items-center">
-          {collections.map((item) => (
-            <div
-              key={item.id}
-              className={`w-40 h-48 ${item.bg} rounded-3xl flex flex-col items-center justify-center shadow-md hover:shadow-lg transition duration-300`}
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-20 h-20 object-contain"
-              />
-
-              <h3 className="text-lg font-bold mt-3">{item.title}</h3>
-              <p className="text-sm text-gray-700">Collection</p>
-            </div>
-          ))}
-        </div>
+    {/* Title */}
+    <div className="row">
+      <div className="col-12 text-center mb-3">
+        <h2
+          className="fw-bold"
+          style={{
+            color: "#1e3a8a",
+            fontSize: "38px",
+            fontFamily: "Baloo 2",
+          }}
+        >
+          🌿 Shop By Collection 🌿
+        </h2>
       </div>
-    </section>
+    </div>
+
+    {/* Collection Grid */}
+    <div className="row justify-content-center g-4">
+      {collections.map((item) => (
+        <div
+          key={item.id}
+          className="col-6 col-md-4 col-lg-2 d-flex justify-content-center"
+        >
+          <div
+            className={`${item.bg} rounded-4 shadow-sm text-center d-flex flex-column justify-content-center align-items-center`}
+            style={{
+              width: "195px",
+              height: "210px",
+              transition: "0.3s",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              className="img-fluid"
+              style={{
+                width: "80px",
+                height: "80px",
+                objectFit: "contain",
+              }}
+            />
+
+            <h5
+              className="fw-bold mt-3 mb-1"
+              style={{ fontFamily: "Baloo 2" }}
+            >
+              {item.title}
+            </h5>
+
+            <p className="text-muted mb-0">
+              Collection
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
   );
 };
 

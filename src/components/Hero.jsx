@@ -37,7 +37,7 @@ const heroSlides = [
 
 const Hero = () => {
   return (
-    <section className="w-full">
+    <section>
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
@@ -46,56 +46,58 @@ const Hero = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={{ clickable: true }}
       >
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full">
+            <div className="position-relative">
 
               {/* Banner Image */}
               <img
                 src={slide.image}
                 alt=""
-                className="w-full h-auto block"
+                className="img-fluid w-100"
               />
 
-              {/* Content Overlay */}
-              <div className="absolute inset-0 z-10">
-                <div className="max-w-7xl mx-auto h-full px-8 lg:px-16">
+              {/* Content */}
+              <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-8">
 
-                  <div className="pt-12 lg:pt-20 max-w-125">
+                      <h1
+                        className="fw-bold display-4 mb-2"
+                        style={{ color: "#1E3A8A" }}
+                      >
+                        {slide.titleTop}
+                      </h1>
 
-                    <h1 className="text-4xl lg:text-7xl font-bold text-[#1E3A8A] leading-tight">
-                      {slide.titleTop}
-                    </h1>
+                      <h1 className="fw-bold display-4 mb-3 heading-font">
+                        <span style={{ color: "#ec4899" }}>
+                          {slide.titlePink}
+                        </span>{" "}
+                        <span style={{ color: "#f97316" }}>
+                          {slide.titleOrange}
+                        </span>
+                      </h1>
 
-                    <h1 className="text-4xl lg:text-7xl font-bold leading-tight">
-                      <span className="text-pink-400">
-                        {slide.titlePink}
-                      </span>{" "}
-                      <span className="text-orange-500">
-                        {slide.titleOrange}
-                      </span>
-                    </h1>
+                      <p className="fs-5 text-secondary mb-4 text-font">
+                        {slide.description}
+                      </p>
 
-                    <p className="mt-4 lg:mt-6 text-lg lg:text-xl text-gray-700">
-                      {slide.description}
-                    </p>
+                      <div className="d-flex flex-wrap gap-3">
+                        <button className="btn btn-lg text-white px-4 py-2"
+                          style={{ backgroundColor: "#ec4899" }}>
+                          SHOP GIRLS
+                        </button>
 
-                    <div className="flex gap-4 mt-6 lg:mt-8">
-                      <button className="bg-pink-400 hover:bg-pink-500 text-white px-8 py-4 rounded-xl font-semibold">
-                        SHOP GIRLS
-                      </button>
+                        <button className="btn btn-primary btn-lg px-4 py-2">
+                          SHOP BOYS
+                        </button>
+                      </div>
 
-                      <button className="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-xl font-semibold">
-                        SHOP BOYS
-                      </button>
                     </div>
-
                   </div>
-
                 </div>
               </div>
 

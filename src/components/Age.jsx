@@ -44,80 +44,99 @@ const ageGroups = [
 
 const ShopByAge = () => {
   return (
-    <section className="py-10 bg-white">
-        {/* Heading */}
-        <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">
-        🌿 Shop By Age 🌿
-      </h2>
+   <section className="py-5 pt-0 bg-white">
+  <div className="container">
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ageGroups.map((item) => (
-            <div
-              key={item.id}
-              className={`
-                ${item.bg}
-                rounded-3xl
-                h-67.5
-                relative
-                overflow-hidden
-                shadow-sm
-                hover:shadow-md
-                transition-all
-                duration-300
-              `}
-            >
-              {/* Text */}
-              <div className="p-6 relative z-10">
-                <h3
-                  className={`text-3xl font-bold leading-tight ${item.text}`}
-                >
-                  {item.title.split("\n").map((line, index) => (
-                    <div key={index}>{line}</div>
-                  ))}
-                </h3>
+    {/* Heading */}
+    <div className="row">
+      <div className="col-12 text-center mb-5">
+        <h2
+          className="fw-bold"
+          style={{
+            color: "#1e3a8a",
+            fontSize: "38px",
+            fontFamily: "Baloo 2",
+          }}
+        >
+          🌿 Shop By Age 🌿
+        </h2>
+      </div>
+    </div>
 
-                <p className="mt-4 text-gray-600 text-lg">
-                  {item.age}
-                </p>
+    {/* Cards */}
+    <div className="row g-4">
+      {ageGroups.map((item) => (
+        <div
+          key={item.id}
+          className="col-12 col-sm-6 col-lg-3"
+        >
+          <div
+            className={`${item.bg} rounded-4 shadow-sm position-relative overflow-hidden h-100`}
+            style={{
+              minHeight: "270px",
+              transition: "0.3s",
+              cursor: "pointer",
+            }}
+          >
+            {/* Content */}
+            <div className="p-4 position-relative" style={{ zIndex: 2 }}>
+              <h3
+                className="fw-bold lh-sm"
+                style={{
+                  color: item.textColor,
+                  fontSize: "30px",
+                  fontFamily: "Baloo 2",
+                }}
+              >
+                {item.title.split("\n").map((line, index) => (
+                  <div key={index}>{line}</div>
+                ))}
+              </h3>
 
-                <button
-                  className={`
-                    mt-6
-                    w-10
-                    h-10
-                    rounded-full
-                    bg-white
-                    shadow
-                    flex
-                    items-center
-                    justify-center
-                    text-xl
-                    font-bold
-                    ${item.arrow}
-                  `}
-                >
-                  →
-                </button>
-              </div>
+              <p
+                className="mt-3 text-secondary"
+                style={{
+                  fontSize: "18px",
+                  whiteSpace: "pre-line",
+                }}
+              >
+                {item.age}
+              </p>
 
-              {/* Child Image */}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="
-                  absolute
-                  bottom-0
-                  right-2
-                  h-50
-                  object-contain
-                  pointer-events-none
-                "
-              />
+              <button
+                className="btn rounded-circle bg-white shadow d-flex align-items-center justify-content-center mt-4"
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  color: item.arrowColor,
+                  fontSize: "20px",
+                  fontWeight: "700",
+                }}
+              >
+                →
+              </button>
             </div>
-          ))}
+
+            {/* Image */}
+            <img
+              src={item.image}
+              alt={item.title}
+              className="position-absolute"
+              style={{
+                right: "10px",
+                bottom: "0",
+                height: "200px",
+                objectFit: "contain",
+                pointerEvents: "none",
+              }}
+            />
+          </div>
         </div>
-    </section>
+      ))}
+    </div>
+
+  </div>
+</section>
   );
 };
 
