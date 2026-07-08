@@ -1,0 +1,55 @@
+.features {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 18px 0;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex: 1;
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+
+  border: 2px solid #ececec;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  color: #d89d2b;
+
+  flex-shrink: 0;
+}
+
+.feature-text h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.feature-text p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #666;
+}
