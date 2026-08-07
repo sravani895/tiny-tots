@@ -4,6 +4,7 @@ import Age from "../components/Age"
 import FeaturesBar from "../components/FeaturesBar/FeaturesBar";
 import BestSellers from "../components/BestSellers/BestSellers";
 import BrandStory from "../components/BrandStory/BrandStory";
+import NewArrivals from "../components/NewArrivals/NewArrivals";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturesBar />
       <BestSellers />
       <BrandStory />
+      <NewArrivals />
     </>
   );
 }

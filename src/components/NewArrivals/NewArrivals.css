@@ -1,0 +1,423 @@
+/* ==========================================
+   NEW ARRIVALS SECTION
+========================================== */
+
+.new-arrivals {
+    width: 95%;
+    max-width: 1500px;
+    margin: 80px auto;
+    position: relative;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.new-arrivals__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 45px;
+}
+
+.new-arrivals__heading h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #233d73;
+    font-family: "Baloo 2", sans-serif;
+    letter-spacing: .3px;
+}
+
+.heading-leaf {
+    font-size: 26px;
+    user-select: none;
+}
+
+/* ==========================================
+   SWIPER
+========================================== */
+
+.arrivals-swiper {
+    padding: 10px 8px 20px;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.arrival-card {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid #ececec;
+    overflow: hidden;
+    position: relative;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.arrival-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 38px rgba(0,0,0,.10);
+}
+
+/* ==========================================
+   WISHLIST
+========================================== */
+
+.wishlist-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,.10);
+
+    z-index: 10;
+
+    transition: all .3s ease;
+}
+
+.wishlist-btn svg {
+    width: 18px;
+    height: 18px;
+
+    display: block;
+
+    color: #bfbfbf;
+
+    transform: translateY(1px);
+}
+
+.wishlist-btn:hover {
+    background: #fff2f5;
+}
+
+.wishlist-btn:hover svg {
+    color: #ef7f9c;
+    transform: translateY(1px) scale(1.08);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.arrival-image {
+    height: 330px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.arrival-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .4s ease;
+}
+
+.arrival-card:hover .arrival-image img {
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.arrival-details {
+    padding: 18px 18px 24px;
+    text-align: center;
+}
+
+.arrival-details h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    min-height: 52px;
+    line-height: 1.35;
+}
+
+.arrival-price {
+    margin: 16px 0 18px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.shop-btn {
+    width: 150px;
+    height: 46px;
+    border: none;
+    border-radius: 999px;
+    background: #ef7f9c;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.shop-btn:hover {
+    background: #e96b8d;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   NAVIGATION ARROWS
+========================================== */
+
+.arrivals-prev,
+.arrivals-next {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #ffd5df;
+    background: #fff;
+    color: #ef7f9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 20;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.arrivals-prev {
+    left: -28px;
+}
+
+.arrivals-next {
+    right: -28px;
+}
+
+.arrivals-prev svg,
+.arrivals-next svg {
+    font-size: 22px;
+}
+
+.arrivals-prev:hover,
+.arrivals-next:hover {
+    background: #ef7f9c;
+    color: #fff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* Hide default Swiper arrows */
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+/* ==========================================
+   CARD HOVER EFFECTS
+========================================== */
+
+.arrival-card:hover .shop-btn {
+    background: #e65d84;
+}
+
+.arrival-card:hover .arrival-details h3 {
+    color: #23427b;
+}
+
+/* ==========================================
+   IMAGE ANIMATION
+========================================== */
+
+.arrival-image img {
+    transition: transform .45s ease;
+}
+
+.arrival-card:hover .arrival-image img {
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   SWIPER PADDING
+========================================== */
+
+.arrivals-swiper {
+    padding-bottom: 30px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .new-arrivals__heading h2 {
+        font-size: 38px;
+    }
+
+    .arrival-image {
+        height: 280px;
+    }
+
+    .arrival-price {
+        font-size: 28px;
+    }
+
+    .arrivals-prev,
+    .arrivals-next {
+        width: 48px;
+        height: 48px;
+    }
+
+    .arrivals-prev {
+        left: -18px;
+    }
+
+    .arrivals-next {
+        right: -18px;
+    }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .new-arrivals {
+        width: 94%;
+    }
+
+    .new-arrivals__heading h2 {
+        font-size: 34px;
+    }
+
+    .arrival-image {
+        height: 240px;
+    }
+
+    .arrival-details h3 {
+        font-size: 18px;
+    }
+
+    .arrival-price {
+        font-size: 24px;
+    }
+
+    .shop-btn {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .arrivals-prev,
+    .arrivals-next {
+        display: none;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .new-arrivals {
+        margin: 60px auto;
+    }
+
+    .new-arrivals__heading {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .new-arrivals__heading h2 {
+        font-size: 30px;
+    }
+
+    .heading-leaf {
+        font-size: 20px;
+    }
+
+    .arrival-image {
+        height: 220px;
+        padding: 14px;
+    }
+
+    .arrival-details {
+        padding: 16px;
+    }
+
+    .arrival-details h3 {
+        font-size: 17px;
+        min-height: auto;
+    }
+
+    .arrival-price {
+        margin: 12px 0 14px;
+        font-size: 22px;
+    }
+
+    .shop-btn {
+        width: 130px;
+        height: 42px;
+        font-size: 13px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .new-arrivals {
+        width: 92%;
+    }
+
+    .new-arrivals__heading h2 {
+        font-size: 26px;
+    }
+
+    .arrival-image {
+        height: 190px;
+    }
+
+    .arrival-details h3 {
+        font-size: 16px;
+    }
+
+    .arrival-price {
+        font-size: 20px;
+    }
+
+    .shop-btn {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
