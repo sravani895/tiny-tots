@@ -1,50 +1,35 @@
 import "./BrandStory.css";
 
-import monkey from "../../assets/monkey-logo-1.png";
-import leftLeaf from "../../assets/leaf-left.png";
-import rightLeaf from "../../assets/leaf-right.png";
+import background from "../../assets/background.png";
 
 const BrandStory = () => {
   return (
     <section className="brand-story">
 
-      <img
-        src={leftLeaf}
-        alt=""
-        className="leaf left-leaf"
-      />
-
-      <div className="brand-image">
-        <img
-          src={monkey}
-          alt="Tiny Monkey"
-        />
+      {/* Left Illustration */}
+      <div className="brand-story__image">
+        <img src={background} alt="Tiny Monkey" />
       </div>
 
-      <div className="brand-content">
+      {/* Right Content */}
+      <div className="brand-story__content">
 
-        <h2>
+        <h2 className="brand-story__title">
           Meet Tiny,
           <span>Our Little Monkey</span>
         </h2>
 
-        <p>
+        <p className="brand-story__description">
           Tiny loves climbing, exploring and making new friends.
           Every Tiny Tots outfit is designed to inspire imagination,
           comfort and confidence in every child.
         </p>
 
-        <button>
+        <button className="brand-story__button">
           OUR STORY
         </button>
 
       </div>
-
-      <img
-        src={rightLeaf}
-        alt=""
-        className="leaf right-leaf"
-      />
 
     </section>
   );
