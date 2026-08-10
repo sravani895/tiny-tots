@@ -1,0 +1,359 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  min-height: 80px;
+
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.logo-main {
+  font-size: 30px;
+  font-weight: 800;
+  color: #23427b;
+}
+
+.logo-subtitle {
+  margin-top: 5px;
+
+  font-size: 11px;
+  color: #ef7f9c;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-link {
+  text-decoration: none;
+
+  color: #333;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ef7f9c;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* =========================================
+   SEARCH / USER
+========================================= */
+
+.navbar-action-btn {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  font-size: 19px;
+
+  color: #333;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.3s ease;
+}
+
+.navbar-action-btn:hover {
+  color: #ef7f9c;
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+.cart-icon {
+  position: relative;
+
+  width: 28px;
+  height: 28px;
+
+  color: #333;
+
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.cart-icon svg {
+  font-size: 22px;
+}
+
+.cart-icon:hover {
+  color: #ef7f9c;
+}
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+.cart-count {
+  position: absolute;
+
+  top: -9px;
+  right: -10px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #ef7f9c;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 22px;
+
+  color: #333;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar-menu {
+    gap: 15px;
+  }
+
+  .navbar-link {
+    font-size: 13px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    min-height: 70px;
+    padding: 0 18px;
+  }
+
+
+  .navbar-menu {
+    display: none;
+  }
+
+
+  .navbar-actions {
+    gap: 15px;
+  }
+
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .mobile-menu {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 20px 25px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    border-top: 1px solid #f2f2f2;
+  }
+
+
+  .mobile-menu-link {
+    text-decoration: none;
+
+    color: #333;
+
+    padding: 14px 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+
+  .mobile-menu-link:hover {
+    color: #ef7f9c;
+  }
+
+
+  .mobile-cart-link {
+    margin-top: 10px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 5px;
+
+    font-weight: 600;
+  }
+
+
+  .mobile-cart-count {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #ef7f9c;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .logo-main {
+    font-size: 25px;
+  }
+
+  .logo-subtitle {
+    font-size: 9px;
+  }
+
+  .navbar-action-btn {
+    font-size: 17px;
+  }
+
+  .cart-icon svg {
+    font-size: 20px;
+  }
+
+}

@@ -14,15 +14,46 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 
-const NewArrivals = () => {
-  return (
-    <section className="new-arrivals mt-5 mb-3">
+import { useCart } from "../context/useCart";
 
-      {/* Section Title */}
+
+const NewArrivals = () => {
+
+  const { addToCart } = useCart();
+
+
+  /*
+   * Swiper loop needs enough slides.
+   *
+   * Since your maximum desktop slidesPerView is 5,
+   * we only enable loop when we have more than 5 products.
+   *
+   * If you have 5 or fewer products, Swiper will
+   * work normally without loop mode.
+   */
+
+  const enableLoop = arrivalsData.length > 5;
+
+
+  const handleAddToCart = (item) => {
+
+    addToCart(item);
+
+  };
+
+
+  return (
+
+    <section className="new-arrivals">
+
+
+      {/* =====================================================
+          SECTION TITLE
+      ====================================================== */}
 
       <div className="new-arrivals__heading">
 
-        <span className="heading-leaf">
+        <span className="heading-leaf heading-leaf-left">
           🍃
         </span>
 
@@ -30,145 +61,231 @@ const NewArrivals = () => {
           New Arrivals
         </h2>
 
-        <span className="heading-leaf">
+        <span className="heading-leaf heading-leaf-right">
           🍂
         </span>
 
       </div>
 
-      {/* Navigation Buttons */}
 
-      <button className="arrivals-prev">
+      {/* =====================================================
+          SLIDER WRAPPER
+      ====================================================== */}
 
-        <FaChevronLeft />
+      <div className="new-arrivals__slider-wrapper">
 
-      </button>
 
-      <button className="arrivals-next">
+        {/* =================================================
+            PREVIOUS BUTTON
+        ================================================== */}
 
-        <FaChevronRight />
+        <button
+          type="button"
+          className="arrivals-prev"
+          aria-label="Previous products"
+        >
 
-      </button>
+          <FaChevronLeft />
 
-      {/* Slider */}
+        </button>
 
-      <Swiper
 
-        modules={[Navigation]}
+        {/* =================================================
+            NEXT BUTTON
+        ================================================== */}
 
-        navigation={{
-          prevEl: ".arrivals-prev",
-          nextEl: ".arrivals-next",
-        }}
+        <button
+          type="button"
+          className="arrivals-next"
+          aria-label="Next products"
+        >
 
-        loop={true}
+          <FaChevronRight />
 
-        spaceBetween={25}
+        </button>
 
-        slidesPerView={5}
 
-        breakpoints={{
+        {/* =================================================
+            SWIPER
+        ================================================== */}
 
-          320: {
+        <Swiper
 
-            slidesPerView: 1.2,
+          modules={[Navigation]}
 
-            spaceBetween: 15,
-          },
+          navigation={{
+            prevEl: ".arrivals-prev",
+            nextEl: ".arrivals-next",
+          }}
 
-          480: {
+          /*
+           * IMPORTANT:
+           * Don't use loop when there aren't enough products.
+           */
 
-            slidesPerView: 2,
+          loop={enableLoop}
 
-            spaceBetween: 20,
-          },
+          spaceBetween={25}
 
-          768: {
+          slidesPerView={1.2}
 
-            slidesPerView: 3,
+          slidesPerGroup={1}
 
-            spaceBetween: 20,
-          },
+          watchOverflow={true}
 
-          1024: {
+          observer={true}
 
-            slidesPerView: 4,
+          observeParents={true}
 
-            spaceBetween: 20,
-          },
+          breakpoints={{
 
-          1280: {
+            /* ---------------------------------------------
+               Small Mobile
+            --------------------------------------------- */
 
-            slidesPerView: 5,
+            320: {
+              slidesPerView: 1.2,
+              spaceBetween: 15,
+            },
 
-            spaceBetween: 25,
-          },
-        }}
 
-        className="arrivals-swiper"
-      >
+            /* ---------------------------------------------
+               Mobile
+            --------------------------------------------- */
 
-        {arrivalsData.map((item) => (
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
 
-          <SwiperSlide
-            key={item.id}
-          >
 
-            <div className="arrival-card">
+            /* ---------------------------------------------
+               Tablet
+            --------------------------------------------- */
 
-              {/* Wishlist */}
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
 
-              <button className="wishlist-btn">
 
-                <FaHeart />
+            /* ---------------------------------------------
+               Small Desktop
+            --------------------------------------------- */
 
-              </button>
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
 
-              {/* Image */}
 
-              <div className="arrival-image">
+            /* ---------------------------------------------
+               Large Desktop
+            --------------------------------------------- */
 
-                <img
-                  src={item.image}
-                  alt={item.name}
-                />
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 25,
+            },
 
-              </div>
+          }}
 
-              {/* Details */}
+          className="arrivals-swiper"
+        >
 
-              <div className="arrival-details">
 
-                <h3>
+          {/* =================================================
+              PRODUCTS
+          ================================================== */}
 
-                  {item.name}
+          {arrivalsData.map((item) => (
 
-                </h3>
+            <SwiperSlide
+              key={item.id}
+            >
 
-                <p className="arrival-price">
+              <div className="arrival-card">
 
-                  ₹{item.price}
 
-                </p>
+                {/* =========================================
+                    WISHLIST BUTTON
+                ========================================== */}
 
-                <button className="shop-btn">
+                <button
+                  type="button"
+                  className="wishlist-btn"
+                  aria-label={`Add ${item.name} to wishlist`}
+                >
 
-                  SHOP NOW
+                  <FaHeart />
 
                 </button>
 
+
+                {/* =========================================
+                    PRODUCT IMAGE
+                ========================================== */}
+
+                <div className="arrival-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                  />
+
+                </div>
+
+
+                {/* =========================================
+                    PRODUCT DETAILS
+                ========================================== */}
+
+                <div className="arrival-details">
+
+
+                  {/* Product name */}
+
+                  <h3>
+                    {item.name}
+                  </h3>
+
+
+                  {/* Price */}
+
+                  <p className="arrival-price">
+                    ₹{item.price}
+                  </p>
+
+
+                  {/* =====================================
+                      SHOP NOW
+                  ====================================== */}
+
+                  <button
+                    type="button"
+                    className="shop-btn"
+                    onClick={() => handleAddToCart(item)}
+                  >
+                    SHOP NOW
+                  </button>
+
+                </div>
+
               </div>
 
-            </div>
+            </SwiperSlide>
 
-          </SwiperSlide>
+          ))}
 
-        ))}
+        </Swiper>
 
-      </Swiper>
+      </div>
 
     </section>
+
   );
+
 };
+
 
 export default NewArrivals;

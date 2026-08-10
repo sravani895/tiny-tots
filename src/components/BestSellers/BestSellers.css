@@ -53,31 +53,111 @@
     object-fit:contain;
 }
 
-.wishlist{
+/* =========================================================
+   BEST SELLERS CARD
+========================================================= */
 
-    position:absolute;
+.best-sellers .card {
+  position: relative;
+}
 
-    top:15px;
 
-    right:15px;
+/* =========================================================
+   BEST SELLERS WISHLIST BUTTON
+========================================================= */
 
-    width:34px;
+.best-sellers__wishlist {
+  position: absolute !important;
 
-    height:34px;
+  top: 12px !important;
+  right: 12px !important;
 
-    background:white;
+  width: 42px !important;
+  height: 42px !important;
 
-    border-radius:50%;
+  min-width: 42px !important;
+  max-width: 42px !important;
 
-    display:flex;
+  min-height: 42px !important;
+  max-height: 42px !important;
 
-    justify-content:center;
+  padding: 0 !important;
+  margin: 0 !important;
 
-    align-items:center;
+  border: none !important;
+  border-radius: 50% !important;
 
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+  background: #ffffff !important;
 
-    color:#999;
+  color: #b8b8b8 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 18px !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  box-sizing: border-box !important;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.10);
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   HEART ICON
+========================================================= */
+
+.best-sellers__wishlist svg {
+  width: 18px !important;
+  height: 18px !important;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.best-sellers__wishlist:hover {
+  color: #ef7f9d !important;
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.best-sellers__wishlist:focus {
+  outline: none;
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.best-sellers__wishlist:active {
+  transform: scale(0.95);
 }
 
 .card h4{
