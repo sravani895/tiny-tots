@@ -16,7 +16,7 @@ import {
 
 const NewArrivals = () => {
   return (
-    <section className="new-arrivals">
+    <section className="new-arrivals mt-5 mb-3">
 
       {/* Section Title */}
 

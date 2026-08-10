@@ -1,11 +1,11 @@
-import boy1 from "../../assets/arrivals/boy1.jpg";
-import girl1 from "../../assets/arrivals/girl11.jpg";
-import boy2 from "../../assets/arrivals/boy2.jpg";
-import girl2 from "../../assets/arrivals/girl12.jpg";
-import boy3 from "../../assets/arrivals/boy3.jpg";
-import girl3 from "../../assets/arrivals/girl13.jpg";
-import boy4 from "../../assets/arrivals/boy4.jpg";
-import girl4 from "../../assets/arrivals/girl14.jpg";
+import boy1 from "../../assets/arrivals/boy1.png";
+import girl1 from "../../assets/arrivals/girl11.png";
+import boy2 from "../../assets/arrivals/boy2.png";
+import girl2 from "../../assets/arrivals/girl12.png";
+import boy3 from "../../assets/arrivals/boy3.png";
+import girl3 from "../../assets/arrivals/girl-13.png";
+import boy4 from "../../assets/arrivals/boy4.png";
+import girl4 from "../../assets/arrivals/girl14.png";
 
 const arrivalsData = [
   {

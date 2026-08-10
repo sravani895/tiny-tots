@@ -90,7 +90,7 @@ const Header = () => {
                     <i className="fas fa-shopping-bag"></i>
 
                     <span
-                      className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                      className="position-absolute top-0 inset-s-100 translate-middle badge rounded-pill"
                       style={{
                         background: "#f97316",
                         fontSize: "10px",

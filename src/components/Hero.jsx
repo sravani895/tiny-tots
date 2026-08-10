@@ -60,7 +60,7 @@ const Hero = () => {
               />
 
               {/* Content */}
-              <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+              <div className="position-absolute top-0 inset-s-0 w-100 h-100 d-flex align-items-center">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-6 col-md-8">

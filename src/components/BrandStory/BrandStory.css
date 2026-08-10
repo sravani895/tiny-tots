@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
 .brand-story {
 
     width: 95%;
@@ -5,12 +7,14 @@
 
     margin: 70px auto;
 
-    background: linear-gradient(
+    /* background: linear-gradient(
         90deg,
         #fffdf9 0%,
         #fff8f1 50%,
         #fff5eb 100%
-    );
+    ); */
+
+    background: #fff6ec;
 
     border-radius: 35px;
 
@@ -22,7 +26,7 @@
 
     overflow: hidden;
 
-    min-height: 320px;
+    min-height: 380px;
 
     padding: 0 40px;
 }
@@ -58,9 +62,11 @@
 
     margin:0;
 
-    font-size:64px;
+    font-family: 'Baloo 2', cursive;
 
-    font-weight:800;
+    font-size:45px;
+
+    font-weight:500;
 
     line-height:1.05;
 
@@ -76,9 +82,9 @@
 
 .brand-story__description{
 
-    margin-top:22px;
+    margin-top:9px;
 
-    margin-bottom:28px;
+    margin-bottom:20px;
 
     max-width:520px;
 
@@ -97,7 +103,7 @@
 
     border:none;
 
-    border-radius:30px;
+    border-radius:9px;
 
     background:#3497df;
 

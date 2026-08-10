@@ -91,6 +91,8 @@
     color:#222;
 
     min-height:48px;
+
+    margin-bottom: 0;
 }
 
 .card span{
@@ -101,7 +103,7 @@
 
     font-weight:bold;
 
-    margin:10px 0 18px;
+    margin:0 0 10px;
 
     color:#111;
 }
@@ -125,6 +127,8 @@
     cursor:pointer;
 
     transition:.3s;
+
+    margin: 0 auto;
 }
 
 .card button:hover{

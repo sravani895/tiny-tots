@@ -1,7 +1,7 @@
-import butterfly from "../../assets/butterfly-1.jpg";
-import hoodie from "../../assets/hoodie.jpg";
-import dino from "../../assets/dino-1.jpg";
-import frock from "../../assets/frock.jpg";
+import butterfly from "../../assets/butterfly-1.png";
+import hoodie from "../../assets/hoodie.png";
+import dino from "../../assets/dino-1.png";
+import frock from "../../assets/frock.png";
 
 export const products = [
   {
