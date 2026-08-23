@@ -190,7 +190,20 @@
   
   .newsletter-form {
     width: 100%;
-    min-width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 30px;
   }
 
   .footer-grid {
