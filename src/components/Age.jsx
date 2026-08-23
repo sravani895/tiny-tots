@@ -54,7 +54,7 @@ const ShopByAge = () => {
           className="fw-bold"
           style={{
             color: "#1e3a8a",
-            fontSize: "38px",
+            fontSize: "clamp(24px, 5vw, 38px)",
             fontFamily: "Baloo 2",
           }}
         >
@@ -84,7 +84,7 @@ const ShopByAge = () => {
                 className="fw-bold lh-sm"
                 style={{
                   color: item.textColor,
-                  fontSize: "30px",
+                  fontSize: "clamp(24px, 5vw, 30px)",
                   fontFamily: "Baloo 2",
                 }}
               >
@@ -96,7 +96,7 @@ const ShopByAge = () => {
               <p
                 className="mt-3 text-secondary"
                 style={{
-                  fontSize: "18px",
+                  fontSize: "clamp(15px, 4vw, 18px)",
                   whiteSpace: "pre-line",
                 }}
               >

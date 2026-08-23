@@ -6,6 +6,8 @@ import BestSellers from "../components/BestSellers/BestSellers";
 import BrandStory from "../components/BrandStory/BrandStory";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
 import Testimonials from "../components/Testimonals/Testimonials";
+import Instagram from "../components/Instagram/Instagram";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <BrandStory />
       <NewArrivals />
       <Testimonials />
+      <Instagram />
+      <Footer />
     </>
   );
 }

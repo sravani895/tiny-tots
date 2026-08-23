@@ -1,21 +1,18 @@
 import "./BrandStory.css";
 // import background from "../../assets/background.png";
 import mainBg from "../../assets/meet-tiny-bg.png";
-
+import monkeyLogo from "../../assets/monkey-logo.png";
 const BrandStory = () => {
   return (
    <section
   className="brand-story mb-2"
   style={{
     backgroundImage: `url(${mainBg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
   }}
 >
   {/* Left Illustration */}
   <div className="brand-story__image">
-    {/* <img src={background} alt="Tiny Monkey" /> */}
+    <img src={monkeyLogo} alt="Tiny Monkey Logo" className="mobile-monkey-logo" />
   </div>
 
   {/* Right Content */}

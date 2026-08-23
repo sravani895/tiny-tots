@@ -26,7 +26,7 @@ const ShopByCollection = () => {
           className="fw-bold"
           style={{
             color: "#1e3a8a",
-            fontSize: "38px",
+            fontSize: "clamp(24px, 5vw, 38px)",
             fontFamily: "Baloo 2",
           }}
         >
@@ -45,7 +45,8 @@ const ShopByCollection = () => {
           <div
             className={`${item.bg} rounded-4 shadow-sm text-center d-flex flex-column justify-content-center align-items-center`}
             style={{
-              width: "195px",
+              width: "100%",
+              maxWidth: "195px",
               height: "210px",
               transition: "0.3s",
               cursor: "pointer",

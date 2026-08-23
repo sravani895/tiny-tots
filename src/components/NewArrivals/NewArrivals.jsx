@@ -3,7 +3,7 @@ import "./NewArrivals.css";
 import arrivalsData from "./arrivalsData";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -111,7 +111,12 @@ const NewArrivals = () => {
 
         <Swiper
 
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
 
           navigation={{
             prevEl: ".arrivals-prev",
@@ -119,15 +124,14 @@ const NewArrivals = () => {
           }}
 
           /*
-           * IMPORTANT:
-           * Don't use loop when there aren't enough products.
+           * Always loop for continuous rotation effect
            */
 
-          loop={enableLoop}
+          loop={true}
 
           spaceBetween={25}
 
-          slidesPerView={1.2}
+          slidesPerView={1}
 
           slidesPerGroup={1}
 
@@ -144,7 +148,7 @@ const NewArrivals = () => {
             --------------------------------------------- */
 
             320: {
-              slidesPerView: 1.2,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
 

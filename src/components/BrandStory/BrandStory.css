@@ -15,6 +15,9 @@
     ); */
 
     background: #fff6ec;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     border-radius: 35px;
 
@@ -44,11 +47,11 @@
 
 .brand-story__image img{
 
+    display: none; /* Hidden on desktop, we use background image instead */
+
     width:100%;
 
     max-width:520px;
-
-    display:block;
 }
 
 /* CONTENT */
@@ -128,39 +131,99 @@
 @media (max-width:992px){
 
 .brand-story{
-
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-    padding:40px 25px;
+    padding:30px 25px;
+    min-height: 300px;
+    background-position: left center;
 }
 
 .brand-story__content{
-
-    padding-left:0;
+    padding-left:15px;
 }
 
 .brand-story__image img{
-
     max-width:320px;
-
     margin-bottom:25px;
 }
 
 .brand-story__title{
-
-    font-size:42px;
+    font-size:32px;
 }
 
 .brand-story__title span{
-
-    font-size:42px;
+    font-size:32px;
 }
 
 .brand-story__description{
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-    max-width:100%;
+.brand-story__button {
+    width: 130px;
+    height: 42px;
+    font-size: 13px;
 }
 
 }
+
+@media (max-width:576px){
+    .brand-story {
+        padding: 25px 15px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none !important;
+        background-color: #fff6ec;
+        margin: 40px auto;
+    }
+    
+    .brand-story::before {
+        display: none;
+    }
+
+    .brand-story__image {
+        display: flex;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+
+    .brand-story__image img {
+        display: block;
+    }
+
+    .brand-story__content {
+        padding-left: 0;
+        text-align: center;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-story__title {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .brand-story__title span {
+        font-size: 28px;
+    }
+
+    .brand-story__description {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    .brand-story__button {
+        width: 130px;
+        height: 42px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}

@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .feature-card {
@@ -22,6 +23,19 @@
   gap: 14px;
 
   flex: 1;
+  min-width: 200px;
+}
+
+@media (max-width: 992px) {
+  .feature-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-card {
+    flex: 1 1 100%;
+  }
 }
 
 .feature-icon {

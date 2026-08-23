@@ -36,3 +36,9 @@ body {
 .color-pink{
   color: #f9aab1;
 }
+
+/* Hide default Swiper navigation arrows in the Hero section completely */
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+  display: none !important;
+}

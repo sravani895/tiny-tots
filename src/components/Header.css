@@ -8,6 +8,10 @@ header {
   z-index: 1000;
 }
 
+.logo-text {
+  font-size: 40px;
+}
+
 
 /* =====================================================
    HEADER ICONS

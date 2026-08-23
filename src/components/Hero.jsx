@@ -37,7 +37,7 @@ const heroSlides = [
 
 const Hero = () => {
   return (
-    <section>
+    <section className="hero">
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
@@ -57,10 +57,11 @@ const Hero = () => {
                 src={slide.image}
                 alt=""
                 className="img-fluid w-100"
+                style={{ minHeight: "450px", objectFit: "cover", objectPosition: "center" }}
               />
 
               {/* Content */}
-              <div className="position-absolute top-0 inset-s-0 w-100 h-100 d-flex align-items-center">
+              <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-6 col-md-8">
@@ -85,13 +86,14 @@ const Hero = () => {
                         {slide.description}
                       </p>
 
-                      <div className="d-flex flex-wrap gap-3">
-                        <button className="btn btn-lg text-white px-4 py-2"
-                          style={{ backgroundColor: "#ec4899" }}>
+                      <div className="d-flex flex-wrap gap-2 gap-md-3">
+                        <button className="btn text-white px-3 py-2 px-md-4 py-md-2"
+                          style={{ backgroundColor: "#ec4899", fontSize: "clamp(12px, 3vw, 16px)" }}>
                           SHOP GIRLS
                         </button>
 
-                        <button className="btn btn-primary btn-lg px-4 py-2">
+                        <button className="btn btn-primary px-3 py-2 px-md-4 py-md-2"
+                           style={{ fontSize: "clamp(12px, 3vw, 16px)" }}>
                           SHOP BOYS
                         </button>
                       </div>

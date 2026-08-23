@@ -3,7 +3,7 @@ import "./BestSellers.css";
 import { products } from "./products";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -102,7 +102,12 @@ const BestSellers = () => {
 
         <Swiper
 
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
 
           navigation={{
             prevEl: ".best-sellers-prev",
@@ -110,10 +115,10 @@ const BestSellers = () => {
           }}
 
           /*
-           * Only loop when there are enough products.
+           * Always loop for continuous rotation effect
            */
 
-          loop={enableLoop}
+          loop={true}
 
           slidesPerView={1}
 

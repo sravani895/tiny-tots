@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -5,6 +6,8 @@ import {
   FaUser,
   FaHeart,
   FaShoppingBag,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
 import monkeyLogo from "../assets/monkey-logo-1.png";
@@ -19,6 +22,11 @@ import "./Header.css";
 const Header = () => {
 
   const { cartCount } = useCart();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
 
   return (
@@ -60,7 +68,7 @@ const Header = () => {
                 LOGO
             ================================================== */}
 
-            <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-3 col-6">
 
               <Link
                 to="/home"
@@ -78,10 +86,9 @@ const Header = () => {
                   />
 
                   <h1
-                    className="mb-0 ms-2"
+                    className="mb-0 ms-2 logo-text"
                     style={{
                       fontFamily: "Pacifico",
-                      fontSize: "40px",
                       lineHeight: 1,
                     }}
                   >
@@ -116,7 +123,7 @@ const Header = () => {
                 NAVIGATION
             ================================================== */}
 
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6 d-none d-md-block">
 
               <ul className="nav justify-content-center">
 
@@ -155,9 +162,9 @@ const Header = () => {
                 HEADER ICONS
             ================================================== */}
 
-            <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-3 col-6 ms-auto mt-lg-0">
 
-              <div className="d-flex justify-content-end align-items-center gap-4">
+              <div className="d-flex justify-content-end align-items-center gap-2 gap-md-4">
 
 
                 {/* SEARCH */}
@@ -216,6 +223,16 @@ const Header = () => {
 
                 </Link>
 
+                {/* MOBILE MENU BUTTON */}
+                <button
+                  type="button"
+                  className="header-icon-btn d-md-none"
+                  onClick={() => setMobileMenuOpen((prev) => !prev)}
+                  aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                >
+                  {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+
               </div>
 
             </div>
@@ -225,6 +242,32 @@ const Header = () => {
         </div>
 
       </header>
+
+      {/* =====================================================
+          MOBILE MENU
+      ====================================================== */}
+      {mobileMenuOpen && (
+        <div className="mobile-header-menu">
+          <ul className="nav flex-column align-items-center py-4 bg-white shadow-sm position-absolute w-100" style={{ zIndex: 1000, left: 0 }}>
+            {NavbarMenu.map((item) => (
+              <li className="nav-item mb-3" key={item.id}>
+                <Link
+                  to={item.link}
+                  className="nav-link fw-medium fs-4"
+                  onClick={closeMobileMenu}
+                  style={{
+                    color: item.title === "Home" ? "#ec4899" : "#374151",
+                    transition: "0.3s",
+                  }}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
     </>
   );
 };
