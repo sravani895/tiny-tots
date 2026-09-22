@@ -15,6 +15,7 @@ import monkeyLogo from "../assets/monkey-logo-1.png";
 import { NavbarMenu } from "./Navbar/navbarMenu";
 
 import { useCart } from "./context/useCart";
+import { useWishlist } from "./context/useWishlist";
 
 import "./Header.css";
 
@@ -22,6 +23,7 @@ import "./Header.css";
 const Header = () => {
 
   const { cartCount } = useCart();
+  const { wishlistCount } = useWishlist();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const closeMobileMenu = () => {
@@ -191,13 +193,21 @@ const Header = () => {
 
                 {/* WISHLIST */}
 
-                <button
-                  className="header-icon-btn"
+                <Link
+                  to="/wishlist"
+                  className="header-cart-icon"
                   aria-label="Wishlist"
-                  type="button"
                 >
+
                   <FaHeart />
-                </button>
+
+                  {wishlistCount > 0 && (
+                    <span className="header-cart-count">
+                      {wishlistCount}
+                    </span>
+                  )}
+
+                </Link>
 
 
                 {/* CART */}

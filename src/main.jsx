@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import { CartProvider } from "./components/context/CartContext";
+import { WishlistProvider } from "./components/context/WishlistContext";
 
 
 ReactDOM.createRoot(
@@ -20,9 +21,11 @@ ReactDOM.createRoot(
     <BrowserRouter>
 
       <CartProvider>
+        <WishlistProvider>
 
-        <App />
+          <App />
 
+        </WishlistProvider>
       </CartProvider>
 
     </BrowserRouter>

@@ -15,11 +15,13 @@ import {
 } from "react-icons/fa";
 
 import { useCart } from "../context/useCart";
+import { useWishlist } from "../context/useWishlist";
 
 
 const NewArrivals = () => {
 
-  const { addToCart } = useCart();
+  const { addToCart, cartItems, increaseQuantity, decreaseQuantity } = useCart();
+  const { wishlistItems, toggleWishlist } = useWishlist();
 
 
   /*
@@ -217,8 +219,9 @@ const NewArrivals = () => {
 
                 <button
                   type="button"
-                  className="wishlist-btn"
+                  className={`wishlist-btn ${wishlistItems.find(i => i.id === item.id) ? 'active' : ''}`}
                   aria-label={`Add ${item.name} to wishlist`}
+                  onClick={() => toggleWishlist(item)}
                 >
 
                   <FaHeart />
@@ -262,16 +265,27 @@ const NewArrivals = () => {
 
 
                   {/* =====================================
-                      SHOP NOW
+                      SHOP NOW / CART CONTROLS
                   ====================================== */}
 
-                  <button
-                    type="button"
-                    className="shop-btn"
-                    onClick={() => handleAddToCart(item)}
-                  >
-                    SHOP NOW
-                  </button>
+                  {(() => {
+                    const cartItem = cartItems.find((i) => i.id === item.id);
+                    return cartItem ? (
+                      <div className="cart-btn-group">
+                        <button type="button" onClick={() => decreaseQuantity(item.id)}>-</button>
+                        <span>{cartItem.quantity}</span>
+                        <button type="button" onClick={() => increaseQuantity(item.id)}>+</button>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        className="shop-btn"
+                        onClick={() => handleAddToCart(item)}
+                      >
+                        SHOP NOW
+                      </button>
+                    );
+                  })()}
 
                 </div>
 

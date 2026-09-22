@@ -143,6 +143,14 @@
     0 4px 14px rgba(0, 0, 0, 0.14);
 }
 
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.best-sellers__wishlist.active {
+  color: #ef7f9d !important;
+}
+
 
 /* =========================================================
    FOCUS
@@ -266,4 +274,40 @@
     .swiper-button-next {
         display: none !important;
     }
+}
+
+/* =========================================================
+   CART BUTTON GROUP
+========================================================= */
+
+.cart-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    background: #f58d9e;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.best-sellers .card .cart-btn-group button {
+    width: 45px !important;
+    background: transparent !important;
+    color: white !important;
+    font-size: 20px;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+}
+
+.best-sellers .card .cart-btn-group button:hover {
+    background: #f07287 !important;
+}
+
+.best-sellers .card .cart-btn-group span {
+    color: white !important;
+    font-weight: bold;
+    font-size: 16px !important;
+    margin: 0 !important;
 }

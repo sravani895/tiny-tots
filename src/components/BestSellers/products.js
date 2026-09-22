@@ -5,25 +5,25 @@ import frock from "../../assets/frock.png";
 
 export const products = [
   {
-    id: 1,
+    id: "bs-1",
     name: "Butterfly Sweatshirt",
     price: 699,
     image: butterfly,
   },
   {
-    id: 2,
+    id: "bs-2",
     name: "Rainbow Jogger Set",
     price: 899,
     image: hoodie,
   },
   {
-    id: 3,
+    id: "bs-3",
     name: "Dino Adventure T-Shirt",
     price: 499,
     image: dino,
   },
   {
-    id: 4,
+    id: "bs-4",
     name: "Floral Flutter Frock",
     price: 799,
     image: frock,

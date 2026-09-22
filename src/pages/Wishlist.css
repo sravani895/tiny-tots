@@ -1,0 +1,17 @@
+.wishlist-page-container {
+  font-family: 'Inter', sans-serif;
+}
+
+.wishlist-card {
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.wishlist-card button:hover {
+  transform: scale(1.05);
+}

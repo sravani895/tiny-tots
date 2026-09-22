@@ -1,0 +1,17 @@
+/* Cart.css */
+.cart-page-container {
+  font-family: 'Inter', sans-serif; /* or the global font used */
+}
+
+.cart-item {
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.02);
+}

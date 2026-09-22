@@ -9,7 +9,7 @@ import girl4 from "../../assets/arrivals/girl14.png";
 
 const arrivalsData = [
   {
-    id: 1,
+    id: "na-1",
     name: "Adventure Color Block Tee",
     price: 599,
     image: boy1,
@@ -17,7 +17,7 @@ const arrivalsData = [
   },
 
   {
-    id: 2,
+    id: "na-2",
     name: "Floral Grace Frock",
     price: 849,
     image: girl1,
@@ -25,7 +25,7 @@ const arrivalsData = [
   },
 
   {
-    id: 3,
+    id: "na-3",
     name: "Ocean Stripes Shirt",
     price: 649,
     image: boy2,
@@ -33,7 +33,7 @@ const arrivalsData = [
   },
 
   {
-    id: 4,
+    id: "na-4",
     name: "Sweetheart Co-Ord Set",
     price: 899,
     image: girl2,
@@ -41,7 +41,7 @@ const arrivalsData = [
   },
 
   {
-    id: 5,
+    id: "na-5",
     name: "Little Explorer Tee",
     price: 499,
     image: boy3,
@@ -49,7 +49,7 @@ const arrivalsData = [
   },
 
   {
-    id: 6,
+    id: "na-6",
     name: "Rainbow Cotton Dress",
     price: 799,
     image: girl3,
@@ -57,7 +57,7 @@ const arrivalsData = [
   },
 
   {
-    id: 7,
+    id: "na-7",
     name: "Dino Adventure T-Shirt",
     price: 549,
     image: boy4,
@@ -65,7 +65,7 @@ const arrivalsData = [
   },
 
   {
-    id: 8,
+    id: "na-8",
     name: "Princess Party Dress",
     price: 999,
     image: girl4,

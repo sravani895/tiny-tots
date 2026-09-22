@@ -115,6 +115,10 @@
     transform: translateY(1px) scale(1.08);
 }
 
+.wishlist-btn.active svg {
+    color: #ef7f9c;
+}
+
 /* ==========================================
    IMAGE
 ========================================== */
@@ -422,4 +426,42 @@
         height: 40px;
         font-size: 12px;
     }
+}
+
+/* =========================================================
+   CART BUTTON GROUP
+========================================================= */
+
+.cart-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    background: #f58d9e;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.new-arrivals .arrival-card .cart-btn-group button {
+    width: 45px !important;
+    background: transparent !important;
+    color: white !important;
+    font-size: 20px;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+    border: none !important;
+}
+
+.new-arrivals .arrival-card .cart-btn-group button:hover {
+    background: #f07287 !important;
+}
+
+.new-arrivals .arrival-card .cart-btn-group span {
+    color: white !important;
+    font-weight: bold;
+    font-size: 16px !important;
+    margin: 0 !important;
+    display: inline-block;
 }
